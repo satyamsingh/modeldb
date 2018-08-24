@@ -61,6 +61,7 @@ If you have [Docker Compose](https://docs.docker.com/compose/install/) installed
     ```bash
     git clone https://github.com/mitdbg/modeldb
     ```
+### Install Docker and docker-compose of the latest version
 
 2. **Build and run ModelDB**
 

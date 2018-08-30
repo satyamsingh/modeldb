@@ -152,13 +152,22 @@ Watch a video of the setup and installation process [here](https://youtu.be/rmNn
     cd [path_to_modeldb]/server/codegen
     ./gen_sqlite.sh
     
-    """SQLite is a public domain, open-source project. It is what is called an “embedded” database which means the DB engine runs as part of your app.
+    """SQLite is a public domain, open-source project. It is what is called an “embedded” database which means the DB 
+    engine runs as part of your app.
+    MySQL is also open-source but is owned by Oracle. MySQL is a database server so you have to install it somewhere 
+    and then connect to it from your app.
 
-    MySQL is also open-source but is owned by Oracle. MySQL is a database server so you have to install it somewhere and then connect to it from your app.
-
-    They serve two totally different purposes. SQLite is often used for an app to maintain its own data. For example, a web browser might use SQLite to store its bookmarks. An email client might use SQLite to store email messages locally. A database server such as MySQL is used to store data that is typically accessed by multiple users and apps.
+    They serve two totally different purposes. SQLite is often used for an app to maintain its own data. For example, 
+    a web browser might use SQLite to store its bookmarks. An email client might use SQLite to store email messages 
+    locally. A database server such as MySQL is used to store data that is typically accessed by multiple users and apps.
     """
-
+    This removes jar files which are already present (specially from sqlite). Then, it creates a directory "jars". 
+    jOOQ is a simple way to integrate the SQL language into Java in a way that allows for developers to write safe and
+    quality SQL fast and directly in Java such that they can again focus on their business.
+    
+    #wget stands for "web get". It is a command-line utility which downloads files over a network.
+    #Downloads some jar files.
+    
     # build and start the server
     cd ..
     ./start_server.sh [thrift_version] &

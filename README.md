@@ -69,6 +69,7 @@ If you have [Docker Compose](https://docs.docker.com/compose/install/) installed
     cd [path_to_modeldb]
     docker-compose up
     ```
+The error was resolved by running the docker-compose command prefixing it with “sudo”. This created containers for Mongo(27017:27017), frontend(6543:6543) and backend(3000:3000).-Satyam
 Note by default ModelDB will listen on localhost:3000.     
 ### Manual Setup
 
@@ -150,6 +151,13 @@ Watch a video of the setup and installation process [here](https://youtu.be/rmNn
     # ***IMPORTANT NOTE: This clears any previous modeldb databases. This should only be done once.***
     cd [path_to_modeldb]/server/codegen
     ./gen_sqlite.sh
+    
+    """SQLite is a public domain, open-source project. It is what is called an “embedded” database which means the DB engine runs as part of your app.
+
+    MySQL is also open-source but is owned by Oracle. MySQL is a database server so you have to install it somewhere and then connect to it from your app.
+
+    They serve two totally different purposes. SQLite is often used for an app to maintain its own data. For example, a web browser might use SQLite to store its bookmarks. An email client might use SQLite to store email messages locally. A database server such as MySQL is used to store data that is typically accessed by multiple users and apps.
+    """
 
     # build and start the server
     cd ..

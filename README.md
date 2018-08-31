@@ -172,6 +172,11 @@ Watch a video of the setup and installation process [here](https://youtu.be/rmNn
     cd ..
     ./start_server.sh [thrift_version] &
     # NOTE: if you are building the project in eclipse, you may need to uncomment the pluginManagement tags in pom.xml located in the server directory
+    
+    
+   Thrift is a framework for developing services in multiple programming languages.  So, you only need this if you are
+   considering supporting multiple programming languages in an IT system.  Used for building API. 
+
 
     # build or pip install the scikit-learn client library
     pip install modeldb
